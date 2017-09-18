@@ -19,7 +19,7 @@ node {
 
     stage('Push image') {
 
-        docker.withRegistry('https://hub.docker.com/r/fialok', 'HubCredentials') {
+        docker.withRegistry('https://hub.docker.com/r/fialok', 'DockerHubCredentials') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
